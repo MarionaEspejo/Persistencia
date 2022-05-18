@@ -1,0 +1,62 @@
+package org.mf.persistence;
+
+import java.util.List;
+import org.mf.classes.Estat;
+import org.mf.classes.Projecte;
+import org.mf.classes.Tasca;
+import org.mf.classes.Usuari;
+
+
+public class GestioProjectesJDBC implements IGestioProjectes{
+
+    @Override
+    public List<Object> Login(String user, String password) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Projecte> GetProjectes(String session_id) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Tasca> GetTasquesAssignades(String session_id) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Tasca> GetDetallTasca(String session_id, int tasca_id) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Tasca> GetNotificacionsPendents(String session_id) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Usuari> LlistaUsuaris(String session_id) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int NovaEntrada(String session_id, String novaEntrada, Estat estat, Usuari nouResponsable) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int NovaEntrada(String session_id, String novaEntrada, Usuari nouResponsable) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int NovaEntrada(String session_id, String novaEntrada, Estat estat) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int NovaEntrada(String session_id, String novaEntrada) throws GestioProjectesException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}

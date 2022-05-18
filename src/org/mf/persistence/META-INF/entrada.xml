@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd" version="2.2">
+    <entity class="org.mf.classes.Rol" access="FIELD" metadata-complete="true">
+        <attributes>
+            <id name="numero">
+                <column name="entry_numero" nullable="false"/>
+            </id> 
+            <basic name="data" optional="false">
+                <column name="entry_data"/>
+            </basic>    
+            <basic name="entrada">
+                <column name="entrada"/>
+            </basic>
+            <basic name="estat">
+                <column name="entry_estat_id"/>
+                <enumerated>ORDINAL</enumerated>
+            </basic>
+        </attributes>
+    </entity>
+
+</entity-mappings>

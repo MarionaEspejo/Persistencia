@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd" version="2.2">
+    <entity class="org.mf.classes.Rol" access="FIELD" metadata-complete="true">
+        <attributes>
+            <id name="id">
+                <column name="tasc_id" nullable="false"/>
+            </id> 
+            <basic name="dataCreacio" optional="false">
+                <column name="tasc_data_creacio"/>
+            </basic>    
+            <basic name="nom">
+                <column name="tasc_nom"/>
+            </basic>
+            <basic name="descripcio">
+                <column name="tasc_descripcio"/>
+            </basic>
+            <basic name="data_limit">
+                <column name="tasc_data_limit"/>
+            </basic>    
+             <basic name="estat">
+                <column name="tasc_estat"/>
+                <enumerated>ORDINAL</enumerated>
+            </basic>  
+            
+        </attributes>
+    </entity>
+
+</entity-mappings>
