@@ -11,6 +11,13 @@
             <basic name="descripcio">
                 <column name="proj_descripcio"/>
             </basic>
+            <many-to-one name="usuari" fetch="LAZY">
+                <join-column name="id_usuari" updatable="false" insertable="false"/>
+                <foreign-key name="proj_usu_id_usuari"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
         </attributes>
     </entity>
 

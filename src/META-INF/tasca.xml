@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd" version="2.2">
-    <entity class="org.mf.classes.Rol" access="FIELD" metadata-complete="true">
+    <entity class="org.mf.classes.Tasca" access="FIELD" metadata-complete="true">
         <attributes>
             <id name="id">
                 <column name="tasc_id" nullable="false"/>
@@ -20,13 +20,28 @@
             <basic name="estat">
                 <column name="tasc_estat"/>
                 <enumerated>ORDINAL</enumerated>
-            </basic>  
-            <one-to-many name="entrades" fecth="LAZY">
+            </basic> 
+            <many-to-one name="propietari" optional="false" fetch="LAZY">
+                <join-column name="id" nullable="false"/>
+                <foreign-key name="usr_propietari_fk"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
+            <many-to-one name="responsable" fetch="LAZY">
+                <join-column name="tasc_responsable"/>
+                <foreign-key name="usr_responsable_fk"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one> 
+            <!--one-to-many name="entrades">
                 <join-column name="entry_numero"/>
                 <cascade>
                     <cascade-persist/>
                 </cascade>
-            </one-to-many>
+            </one-to-many-->
+            <transient name="entrades"/>
         </attributes>
     </entity>
 

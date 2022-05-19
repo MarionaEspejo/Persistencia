@@ -2,27 +2,26 @@
 <entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd" version="2.2">
     <entity class="org.mf.classes.ProjecteUsuariRol" access="FIELD" metadata-complete="true">
         <attributes>
-            <id name="Projecte">
+            <id name="idProjecte">
+                <column name="id_projecte" nullable="false"/>
+            </id> 
+            <id name="idUsuari">
                 <column name="id_projecte" nullable="false"/>
             </id> 
             <basic name="nom" optional="false">
                 <column name="usr_nom"/>
             </basic>    
-            <basic name="cognom1">
-                <column name="usr_cognom1"/>
-            </basic>
-            <basic name="cognom2">
-                <column name="usr_cognom2"/>
-            </basic>
-            <basic name="dataNaixement">
-                <column name="usr_data_naixement"/>
-            </basic>
-            <basic name="login">
-                <column name="usr_login"/>
-            </basic>
-            <basic name="passwordHash">
-                <column name="usr_passwd_hash"/>
-            </basic>
+            <basic name="rol" optional="false">
+                <column name="id_rol"/>
+            </basic>    
+            <many-to-one name="usuari" fetch="LAZY">
+                <join-column name="id_usuari" updatable="false" insertable="false"/>
+                <foreign-key name="proj_usu_id_projecte"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
+            <transient name="projecte"/>
         </attributes>
     </entity>
 
