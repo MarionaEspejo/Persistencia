@@ -23,6 +23,20 @@
             <basic name="passwordHash">
                 <column name="usr_passwd_hash"/>
             </basic>
+            <many-to-one name="propietari" optional="false" fetch="LAZY">
+                <join-column name="id" nullable="false"/>
+                <foreign-key name="usr_propietari_fk"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
+            <many-to-one name="responsable" fetch="LAZY">
+                <join-column name="id"/>
+                <foreign-key name="usr_responsable_fk"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
         </attributes>
     </entity>
 

@@ -15,6 +15,26 @@
                 <column name="entry_estat_id"/>
                 <enumerated>ORDINAL</enumerated>
             </basic>
+            <many-to-one name="escriptor" optional="false" fetch="LAZY">
+                <join-column name="id" nullable="false"/>
+                <foreign-key name="entry_escriptor_fk"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
+            <many-to-one name="novaAssignacio" fetch="LAZY">
+                <join-column name="id"/>
+                <foreign-key name="entry_novaAssignacio_fk"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
+            <many-to-one name="nouEstat" fetch="LAZY">
+                <foreign-key name="entry_nouEstat_fk"/>
+                <cascade>
+                    <cascade-persist/>
+                </cascade>
+            </many-to-one>
         </attributes>
     </entity>
 
