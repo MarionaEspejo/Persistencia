@@ -1,16 +1,12 @@
 package org.mf.persistence;
 
 import java.util.List;
-import org.mf.classes.Estat;
-import org.mf.classes.Projecte;
-import org.mf.classes.Tasca;
-import org.mf.classes.Usuari;
 
 public interface IGestioProjectes {
 
     List<Object> Login(String user, String password) throws GestioProjectesException;
 
-    List<Projecte> GetProjectes(String session_id) throws GestioProjectesException;
+   /* List<Projecte> GetProjectes(String session_id) throws GestioProjectesException;
 
     List<Tasca> GetTasquesAssignades(String session_id) throws GestioProjectesException;
 
@@ -26,7 +22,7 @@ public interface IGestioProjectes {
 
     int NovaEntrada(String session_id, String novaEntrada, Estat estat) throws GestioProjectesException;
 
-    int NovaEntrada(String session_id, String novaEntrada) throws GestioProjectesException;
+    int NovaEntrada(String session_id, String novaEntrada) throws GestioProjectesException;*/
 
 	/**
      * Tanca la connexió amb el SGBD
