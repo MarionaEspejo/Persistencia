@@ -35,6 +35,8 @@ public interface IGestioProjectes {
 
     public List<Projecte> getLlistaProjectesNoAssignats(Usuari usuari) throws GestioProjectesException;
 
+    public List<Rol> getRols() throws GestioProjectesException;
+
     public void desassignarProjecte(Usuari usu, Projecte proj, Rol rol) throws GestioProjectesException;
 
     public void assignarProjecte(Usuari usu, Projecte proj, Rol rol) throws GestioProjectesException;
